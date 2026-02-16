@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCC Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sf-banner">
+    <div class="banner-content">
+        <div class="banner-icon">
+            <svg viewBox="0 0 24 24"><path d="M19,3H5C3.89,3 3,3.9 3,5V19C3,20.1 3.89,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.9 20.1,3 19,3M19,19H5V5H19V19M7,10H9V17H7V10M11,7H13V17H11V7M15,13H17V17H15V13" fill="white"/></svg>
+        </div>
+        <div>
+            <h1>JCC Analytics Dashboard</h1>
+            <span class="sub-header-banner">Executive Strategy • Real-Time Sales Performance</span>
+        </div>
+    </div>
+</div>
+
+<div class="sf-utility-bar">
+    <div class="utility-content">
+        <div class="filter-group">
+            <span class="filter-label">VIEWING DATA FOR:</span>
+            <select id="categoryFilter">
+                <option value="all">Overall Performance</option>
+                <option value="music">Music</option>
+                <option value="family">Family Entertainment</option>
+                <option value="rentals">Rentals</option>
+                <option value="dance">Dance</option>
+                <option value="film">Film</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="dashboard-wrapper">
+    <div class="grid-container">
+        <div class="card revenue-card">
+            <div class="card-header-flex">
+                <span class="card-header">Total Revenue</span>
+                <svg class="header-icon-small" viewBox="0 0 24 24"><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2Zm0,18c-4.41,0-8-3.59-8-8s3.59-8,8-8,8,3.59,8,8-3.59,8-8,8Zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67,0-.84.79-1.39,2.1-1.39,1.47,0,2.01.59,2.06,1.47h1.73c-.05-1.54-1.02-2.73-2.55-3.12V4.5h-2.59v1.97c-1.51.32-2.73,1.3-2.73,2.78,0,1.9,1.57,2.84,3.87,3.39,2.02.48,2.56,1.18,2.56,1.93,0,1.21-1.18,1.69-2.5,1.69-1.67,0-2.32-.73-2.42-1.85h-1.75c.1,2.01,1.44,2.94,2.92,3.31v1.98h2.59v-2.02c1.61-.31,2.73-1.27,2.73-2.77,0-1.79-1.33-2.61-3.64-3.2Z" fill="#0176d3"/></svg>
+            </div>
+            <div class="metric-value" id="revMetric">$718,518</div>
+         <div class="revenue-split">
+        <div class="split-item">
+            <span class="split-label">Revenue Share</span>
+            <strong id="catPct">100%</strong>
+        </div>
+        <div class="split-item">
+            <span class="split-label">Tickets Sold</span>
+            <strong id="ticketCount">23,933</strong>
+        </div>
+        <div class="split-item">
+            <span class="split-label">Avg. Price</span>
+            <strong id="avgPrice">$30.02</strong>
+        </div>
+    </div>
+            <div class="card-conclusion">
+                <svg style="width:24px; height:24px; margin-right:10px; fill:#72b6ff;" viewBox="0 0 24 24">
+    <path d="M12,2L14.5,9.5L22,12L14.5,14.5L12,22L9.5,14.5L2,12L9.5,9.5L12,2M19,4L20,6.5L22.5,7.5L20,8.5L19,11L18,8.5L15.5,7.5L18,6.5L19,4M6,14L7,16.5L9.5,17.5L7,18.5L6,21L5,18.5L2.5,17.5L5,16.5L6,14Z" />
+</svg>
+                <span id="rev-conclusion">Premium Music tier drives 61% of total volume.</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Audience Geography</div>
+            <div class="metric-value">95.7%</div>
+            <div class="sub-metric">Market Hub: <strong>Maryland</strong></div>
+            <div class="city-list">
+                <div class="city-item"><span>Baltimore</span> <strong id="city1">24.9%</strong></div>
+                <div class="city-item"><span>Owings Mills</span> <strong id="city2">17.7%</strong></div>
+                <div class="city-item"><span>Reisterstown</span> <strong id="city3">7.8%</strong></div>
+                <div class="city-item"><span>Randallstown</span> <strong id="city4">7.9%</strong></div>
+                <div class="city-item"><span>Pikesville</span> <strong id="city5">7.5%</strong></div>
+            </div>
+        </div>
+
+        <div class="card price-card">
+            <div class="card-header-flex">
+                <span class="card-header">Price Distribution (Polarization)</span>
+                <svg class="header-icon-small" viewBox="0 0 24 24"><path d="M22,21H2V3H4V19H6V10H10V19H12V14H16V19H18V7H22V21Z" fill="#0176d3"/></svg>
+            </div>
+            <div class="price-grid">
+                <div class="price-bar-wrapper highlight-blue"><span class="price-label">FREE</span><div class="price-bar"><div class="fill" style="height: 22.0%;"></div></div><span class="price-val">22.0%</span></div>
+                <div class="price-bar-wrapper"><span class="price-label">1-10</span><div class="price-bar"><div class="fill" style="height: 0.1%;"></div></div><span class="price-val">0.1%</span></div>
+                <div class="price-bar-wrapper"><span class="price-label">11-20</span><div class="price-bar"><div class="fill" style="height: 14.1%;"></div></div><span class="price-val">14.1%</span></div>
+                <div class="price-bar-wrapper"><span class="price-label">21-30</span><div class="price-bar"><div class="fill" style="height: 14.8%;"></div></div><span class="price-val">14.8%</span></div>
+                <div class="price-bar-wrapper"><span class="price-label">31-40</span><div class="price-bar"><div class="fill" style="height: 14.8%;"></div></div><span class="price-val">14.8%</span></div>
+                <div class="price-bar-wrapper highlight-navy"><span class="price-label">41-50</span><div class="price-bar"><div class="fill" style="height: 25.3%;"></div></div><span class="price-val">25.3%</span></div>
+                <div class="price-bar-wrapper"><span class="price-label">50+</span><div class="price-bar"><div class="fill" style="height: 8.9%;"></div></div><span class="price-val">8.9%</span></div>
+            </div>
+            <div class="card-conclusion">
+                <svg class="concl-icon" viewBox="0 0 24 24"><path d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" fill="#0176d3"/></svg>
+                <span id="price-conclusion">Volume anchored in FREE seats; Revenue in $41-50 tier.</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Customer Retention</div>
+            <div class="gauge-container">
+                <svg viewBox="0 0 100 55" class="gauge">
+                    <path class="gauge-bg" d="M10,50 A40,40 0 0,1 90,50" />
+                    <path id="gaugeFill" class="gauge-fill" d="M10,50 A40,40 0 0,1 90,50" />
+                </svg>
+                <div class="gauge-value" id="loyaltyMetric">48.3%</div>
+            </div>
+            <div class="retention-info" >
+                <div class="retention-main">Avg. <strong><span id="retentionVal">5.66</span></strong> events per year</div>
+                <div class="retention-tag"><strong>Super Fans:</strong> High loyalty.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="card double">
+            <div class="card-header">Seasonal Performance (Order Volume Trend)</div>
+            <div class="line-chart-container">
+                <svg id="seasonalLineChart" viewBox="0 0 1000 200" preserveAspectRatio="none">
+                    <path id="chartPath" d="" fill="rgba(1, 118, 211, 0.1)" stroke="#0176d3" stroke-width="3"/>
+                </svg>
+                <div class="month-labels" id="monthLabels"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Peak Event Times</div>
+            <ul class="time-list" id="timeList"></ul>
+        </div>
+        <div class="card">
+            <div class="card-header">Booking Dynamics & Dead Zone</div>
+            <div class="lead-time-display"><span class="lt-val" id="windowMetric">40.6</span><span class="lt-label">Avg. Lead Time (Days)</span></div>
+            <div class="lifecycle-timeline">
+                <div class="lc-step"><span>90d+</span><strong id="dz-90">12.0%</strong></div>
+                <div class="lc-step"><span>61-90d</span><strong id="dz-61">12.7%</strong></div>
+                <div class="lc-step"><span>31-60d</span><strong id="dz-31">20.5%</strong></div>
+                <div class="lc-step"><span>15-30d</span><strong id="dz-15">20.7%</strong></div>
+                <div class="lc-step danger"><span>8-14d</span><strong id="dz-dead">11.6%</strong></div>
+                <div class="lc-step rush"><span>0-7d</span><strong id="dz-rush">22.5%</strong></div>
+            </div>
+            <div class="card-conclusion">
+                <svg class="concl-icon" viewBox="0 0 24 24"><path d="M12,2L1,21H23L12,2M12,6L19.53,19H4.47L12,6M11,10V14H13V10H11M11,16V18H13V16H11Z" fill="#ea001e"/></svg>
+                <span id="dz-conclusion">Stop marketing spend 14 days out. Reallocate to the 7-day rush.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="insights-section">
+        <div class="insights-title">
+            <svg style="width:20px; height:20px; margin-right:10px; fill:#72b6ff;" viewBox="0 0 24 24"><path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z"/></svg>
+            Leadership Takeaways & Strategic Opportunities
+        </div>
+        <div class="insights-grid">
+            <div class="insight-card"><strong>Hyper-Local Marketing</strong>Focus marketing budget on MD cluster. 96% revenue is within 20 miles.</div>
+            <div class="insight-card"><strong>Music Anchor</strong>Music drives 60% of volume. Use as acquisition funnel for other categories.</div>
+            <div class="insight-card"><strong>Retention Goldmine</strong>Nearly 50% repeat visitors. A formal program could boost the 5.7 average.</div>
+            <div class="insight-card"><strong>Planning Horizon</strong>40-day lead time means major campaigns must launch 60 days out.</div>
+        </div>
+    </div>
+</div>
+
+<script src="javascript.js"></script>
+</body>
+</html>
