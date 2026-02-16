@@ -29,7 +29,7 @@ const dashData = {
         eventTimes: [{t: "Morning (6am-12pm)", p: "40.9%"}, {t: "Afternoon (12pm-6pm)", p: "41.7%"}, {t: "Evening (6pm-10pm)", p: "8.6%"}, {t: "Night (10pm-6am)", p: "8.8%"}],
         deadZone: { "90": "13.8%", "61": "15.2%", "31": "27.6%", "15": "16.6%", "dead": "10.1%", "rush": "16.7%" },
         cities: ["24.6%", "12.4%", "9.9%", "1.6%", "11.7%"],
-        revConcl: "Family events show high Q4 volume (months 11-12).",
+        revConcl: "Family events show high Q4 volume.",
         priceConcl: "Strong mid-tier demand: 31% within the $11-20 range."
     },
     rentals: {
@@ -67,7 +67,7 @@ const dashData = {
     const updateUI = (cat) => {
         const d = dashData[cat] || dashData.all;
         document.getElementById('revMetric').innerText = d.revenue;
-		document.getElementById('catPct').innerText = d.catPct;
+        document.getElementById('catPct').innerText = d.catPct;
         document.getElementById('ticketCount').innerText = d.tickets;
         document.getElementById('avgPrice').innerText = d.avg;
         document.getElementById('rev-conclusion').innerText = d.revConcl;
@@ -80,15 +80,15 @@ const dashData = {
         gf.style.strokeDashoffset = off;
         gf.style.stroke = '#0176d3';
         const dzc = document.getElementById('dz-conclusion');
-        if (cat === 'rentals') dzc.innerText = "Critical: 54% of sales are last-minute (0-14 days).";
+        if (cat === 'rentals') dzc.innerText = "Critical: 54% of sales are last-minute.";
         else if (cat === 'music') dzc.innerText = "Stable booking curve; Dead Zone is minimal (9%).";
         else if (cat === 'family') dzc.innerText = "Families plan ahead; focus on the 31-60 day window.";
-        else dzc.innerText = "Stop marketing spend 14 days out; reallocate to the 7-day rush.";
+        else dzc.innerText = "Stop marketing spend 14 days out.";
         const pFills = document.querySelectorAll('.price-bar .fill');
         const pVals = document.querySelectorAll('.price-val');
         d.pricing.forEach((p, i) => {
             if(pFills[i]) pFills[i].style.height = p;
-            if(pVals[i]) pVals[i].innerText = p; // Keep the % sign
+            if(pVals[i]) pVals[i].innerText = p;
         });
         document.getElementById('dz-90').innerText = d.deadZone["90"];
         document.getElementById('dz-61').innerText = d.deadZone["61"];
