@@ -60,7 +60,7 @@
         <div class="card">
             <div class="card-header">Audience Geography</div>
             <div class="metric-value">95.7%</div>
-            <div class="sub-metric">Market Hub: <strong>Maryland</strong></div>
+            <div class="sub-metric">Top Sales Region: <strong>Maryland</strong></div>
             <div class="city-list">
                 <div class="city-item"><span>Baltimore</span> <strong id="city1">24.9%</strong></div>
                 <div class="city-item"><span>Owings Mills</span> <strong id="city2">17.7%</strong></div>
@@ -72,7 +72,7 @@
 
         <div class="card price-card">
             <div class="card-header-flex">
-                <span class="card-header">Price Distribution (Polarization)</span>
+                <span class="card-header">Price Distribution</span>
                 <svg class="header-icon-small" viewBox="0 0 24 24"><path d="M22,21H2V3H4V19H6V10H10V19H12V14H16V19H18V7H22V21Z" fill="#0176d3"/></svg>
             </div>
             <div class="price-grid">
@@ -86,7 +86,7 @@
             </div>
             <div class="card-conclusion">
                 <svg class="concl-icon" viewBox="0 0 24 24"><path d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" fill="#0176d3"/></svg>
-                <span id="price-conclusion">Volume anchored in FREE seats; Revenue in $41-50 tier.</span>
+                <span id="price-conclusion">Bookings mostly free, revenue from $41–50 seats.</span>
             </div>
         </div>
 
@@ -100,7 +100,24 @@
                 <div class="gauge-value" id="loyaltyMetric">48.3%</div>
             </div>
             <div class="retention-info">
-                <div class="retention-main">Avg. <strong><span id="retentionVal">5.66</span></strong> events per year</div>
+                <div class="retention-main">Avg. <strong><span id="retentionVal">5.66</span></strong> events per year.</div>
+						
+    <div style="display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 6px;">
+	
+  <svg id="starContainer"style="width:18px; height:18px; fill:#0176d3;" viewBox="0 0 24 24">
+            <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg> 
+		
+		<svg id="trophyContainer" style="width:18px; height:18px; fill:#0176d3;" viewBox="0 0 24 24">
+            <path d="M18,2H6V5H2V11C2,13.21 3.79,15 6,15C6.5,15 6.96,14.91 7.4,14.75C8.56,16.62 10.64,18 13,18V21H9V23H19V21H15V18C17.36,18 19.44,16.62 20.6,14.75C21.04,14.91 21.5,15 22,15C24.21,15 26,13.21 26,11V5H22V2M4,11V7H6V11C6,11.55 5.55,12 5,12C4.45,12 4,11.55 4,11M22,11C21.45,12 21,11.55 21,11V7H23V11C23,11.55 22.55,12 22,12Z" />
+        </svg>
+		
+		<svg  id="attantionContainer" class="concl-icon" viewBox="0 0 24 24"><path d="M12,2L1,21H23L12,2M12,6L19.53,19H4.47L12,6M11,10V14H13V10H11M11,16V18H13V16H11Z" fill="#ea001e"></path></svg>
+		
+        <strong><span class="retention-tag" id="superFan"></span></strong>
+    </div>
+
+			
             </div>
         </div>
     </div>
@@ -122,15 +139,15 @@
         </div>
 
         <div class="card">
-            <div class="card-header">Booking Dynamics & Dead Zone</div>
+            <div class="card-header">Booking Dynamics</div>
             <div class="lead-time-display"><span class="lt-val" id="windowMetric">40.6</span><span class="lt-label">Avg. Lead Time (Days)</span></div>
             <div class="lifecycle-timeline">
                 <div class="lc-step"><span>90d+</span><strong id="dz-90">12.0%</strong></div>
-                <div class="lc-step"><span>61-90d</span><strong id="dz-61">12.7%</strong></div>
-                <div class="lc-step"><span>31-60d</span><strong id="dz-31">20.5%</strong></div>
-                <div class="lc-step"><span>15-30d</span><strong id="dz-15">20.7%</strong></div>
-                <div class="lc-step danger"><span>8-14d</span><strong id="dz-dead">11.6%</strong></div>
-                <div class="lc-step rush"><span>0-7d</span><strong id="dz-rush">22.5%</strong></div>
+                <div class="lc-step"><span>90-61d</span><strong id="dz-61">12.7%</strong></div>
+                <div class="lc-step"><span>60-31d</span><strong id="dz-31">20.5%</strong></div>
+                <div class="lc-step"><span>30-15d</span><strong id="dz-15">20.7%</strong></div>
+                <div class="lc-step danger"><span>14-8d</span><strong id="dz-dead">11.6%</strong></div>
+                <div class="lc-step rush"><span>7-0d</span><strong id="dz-rush">22.5%</strong></div>
             </div>
             <div class="card-conclusion">
                 <svg class="concl-icon" viewBox="0 0 24 24"><path d="M12,2L1,21H23L12,2M12,6L19.53,19H4.47L12,6M11,10V14H13V10H11M11,16V18H13V16H11Z" fill="#ea001e"/></svg>
