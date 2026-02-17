@@ -81,8 +81,8 @@ select { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--sf-borde
 .lead-time-display { text-align: center; margin-bottom: 10px; }
 .lt-val { font-size: 2.5rem; font-weight: 300; color: var(--sf-blue); display: block; }
 .lt-label { font-size: 0.7rem; color: #666; }
-.lifecycle-timeline { display: flex; gap: 3px; margin-bottom: 15px; }
-.lc-step { flex: 1; background: #f8f9fb; padding: 8px 2px; text-align: center; border-radius: 2px; border-bottom: 3px solid #ddd; }
+.lifecycle-timeline { display: flex; gap: 12px; margin-bottom: 15px; }
+.lc-step { flex: 1; background: #f8f9fb; padding: 10px 7px; text-align: center; border-radius: 2px; border-bottom: 3px solid #ddd; }
 .lc-step span { display: block; font-size: 0.5rem; color: #777; margin-bottom: 2px; }
 .lc-step strong { font-size: 0.75rem; color: var(--sf-navy); }
 .lc-step.danger { border-bottom-color: var(--sf-danger); background: #fff1f1; }
@@ -121,6 +121,7 @@ select { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--sf-borde
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+	margin-right: 15px; 
 }
 
 /* Ticket SVG */
@@ -148,10 +149,10 @@ select { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--sf-borde
    MOBILE RESPONSIVENESS (Tablet & Mobile)
    ============================================================ */
 
-/* 1. Tablet / iPad Pro (769px to 1100px) */
+/* 1. Tablet (769px to 1100px) */
 @media (min-width: 769px) and (max-width: 1100px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 עמודות למניעת צפיפות */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 15px;
     }
     .card.double {
@@ -170,6 +171,14 @@ select { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--sf-borde
     .banner-text h1 {
         font-size: 1.4rem;
     }
+	.lifecycle-timeline {
+        max-width: 100%; 
+        gap: 6px;
+    }
+	.lc-step strong {
+        font-size: 0.7rem; 
+    }
+	.lc-step { padding: 10px; margin: 0 2px;}
 }
 
 /* 2. Mobile (up to 768px) */
@@ -182,7 +191,7 @@ select { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--sf-borde
     .dashboard-wrapper { padding: 15px; }
     
     .grid-container, .insights-grid {
-        grid-template-columns: 1fr; /* עמודה אחת בלבד */
+        grid-template-columns: 1fr; 
         gap: 15px;
     }
     
@@ -196,3 +205,5 @@ select { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--sf-borde
         height: 32px;
     }
 }
+
+
