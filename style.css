@@ -143,59 +143,56 @@ select { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--sf-borde
     display: block;
 }
 
+
 /* ============================================================
-   MOBILE RESPONSIVENESS (Media Queries)
+   MOBILE RESPONSIVENESS (Tablet & Mobile)
    ============================================================ */
 
+/* 1. Tablet / iPad Pro (769px to 1100px) */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 עמודות למניעת צפיפות */
+        gap: 15px;
+    }
+    .card.double {
+        grid-column: span 2;
+    }
+    .insights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .metric-value {
+        font-size: 1.9rem;
+    }
+    .theater-ticket-icon {
+        width: 28px;
+        height: 28px;
+    }
+    .banner-text h1 {
+        font-size: 1.4rem;
+    }
+}
+
+/* 2. Mobile (up to 768px) */
 @media (max-width: 768px) {
-    /* Adjust Banner & Utility */
     .sf-banner { padding: 20px; text-align: center; }
-    .banner-content { flex-direction: column; gap: 10px; }
+    .banner-content { flex-direction: column; gap: 12px; }
+    .banner-text h1 { font-size: 1.3rem; }
     .sf-utility-bar { padding: 10px 20px; }
     .utility-content { justify-content: center; }
-    
-    /* Global Wrapper Adjustments */
     .dashboard-wrapper { padding: 15px; }
     
-    /* Stack Grid Containers */
-    .grid-container {
-        grid-template-columns: 1fr; /* One column instead of four */
+    .grid-container, .insights-grid {
+        grid-template-columns: 1fr; /* עמודה אחת בלבד */
         gap: 15px;
     }
     
-    /* Ensure double-width cards become single width */
-    .card.double {
-        grid-column: span 1;
-    }
+    .card.double { grid-column: span 1; }
+    .metric-value { font-size: 1.8rem; }
+    .revenue-split { flex-wrap: wrap; }
+    .split-item { min-width: 45%; margin-bottom: 10px; }
     
-    /* Insights Footer Stacking */
-    .insights-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Slightly smaller metric values for small screens */
-    .metric-value {
-        font-size: 1.8rem;
-    }
-    
-    /* Improve spacing for revenue split items on small screens */
-    .revenue-split {
-        flex-wrap: wrap;
-    }
-    .split-item {
-        min-width: 45%;
-        margin-bottom: 10px;
-    }
-	
-	.sf-banner {
-        padding: 20px;
-    }
-    .banner-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 12px;
-    }
-    .banner-text h1 {
-        font-size: 1.3rem;
+    .theater-ticket-icon {
+        width: 32px;
+        height: 32px;
     }
 }
