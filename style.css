@@ -178,7 +178,7 @@ select { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--sf-borde
 	.lc-step strong {
         font-size: 0.7rem; 
     }
-	.lc-step { padding: 10px; margin: 0 2px;}
+	.lc-step { padding: 10px; margin: 0 3px;}
 }
 
 /* 2. Mobile (up to 768px) */
