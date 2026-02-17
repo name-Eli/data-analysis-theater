@@ -9,7 +9,7 @@ const dashData = {
         eventTimes: [{t: "Morning (6am-12pm)", p: "36.0%"}, {t: "Afternoon (12pm-6pm)", p: "13.9%"}, {t: "Evening (6pm-10pm)", p: "38.9%"}, {t: "Night (10pm-6am)", p: "11.2%"}],
         deadZone: { "90": "12.0%", "61": "12.7%", "31": "20.5%", "15": "20.7%", "dead": "11.6%", "rush": "22.5%" },
         cities: ["24.9%", "17.7%", "7.8%", "7.9%", "7.5%"],
-        revConcl: "Premium Music tier drives 61% of total volume.",
+        revConcl: "Premium Music tier drives 50% of total volume.",
         priceConcl: "Bookings mostly free, revenue from $41–50 seats.",
 		superFan: "High Customer Loyalty!"
     },
