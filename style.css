@@ -95,6 +95,54 @@ select { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--sf-borde
 .insight-card { background: rgba(255,255,255,0.1); padding: 15px; border-left: 3px solid var(--sf-blue); font-size: 0.75rem; line-height: 1.5; }
 .insight-card strong { display: block; color: #72b6ff; margin-bottom: 5px; font-size: 0.85rem; }
 
+
+/* Banner Container */
+.sf-banner {
+    background-color: #001639;
+    padding: 25px 40px;
+    color: white;
+}
+
+/* Wrapper for alignment */
+.banner-content {
+    display: flex;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Icon Box */
+.banner-icon {
+    background: #0176d3;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Ticket SVG */
+.theater-ticket-icon {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+/* Text Container */
+.banner-text h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.sub-header-banner {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    display: block;
+}
+
 /* ============================================================
    MOBILE RESPONSIVENESS (Media Queries)
    ============================================================ */
@@ -137,5 +185,17 @@ select { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--sf-borde
     .split-item {
         min-width: 45%;
         margin-bottom: 10px;
+    }
+	
+	.sf-banner {
+        padding: 20px;
+    }
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    .banner-text h1 {
+        font-size: 1.3rem;
     }
 }
